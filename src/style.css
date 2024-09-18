@@ -36,7 +36,7 @@ h1.navbar {
     margin: 0px;
 }
 
-#center {
+#nav-center {
     display: flex;
     width: 60%;
     justify-content: center;
@@ -62,7 +62,7 @@ a.navbar {
     color: #1f1f1f;
 }
 
-#right {
+#nav-right {
     display: flex;
     justify-content: flex-end;
     width: 20%;
