@@ -46,7 +46,7 @@ a.navbar {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    color: #ffffff;
+    color: #ff6600;
     height: 48px;
     font-size: 16px;
     margin: 8px;
@@ -57,9 +57,10 @@ a.navbar {
     text-decoration: none;
 }
 
-#home {
+#apps {
     background-color: #ff6600;
     color: #1f1f1f;
+    font-weight: bold;
 }
 
 #nav-right {
@@ -74,7 +75,7 @@ a.navbar {
     flex-wrap: wrap;
     align-content: center;
     background-color: #1f1f1f; /*Quando ci vai sopra con il mouse deve diventare #ff4d00*/
-    color: #ffffff; /*Quando ci vai sopra con il mouse deve diventare #1f1f1f*/
+    color: #ff6600; /*Quando ci vai sopra con il mouse deve diventare #1f1f1f*/
     height: 48px;
     width: 140px;
     font-size: 16px; /*Quando ci vai sopra con il mouse deve diventare in grassetto*/
@@ -83,7 +84,6 @@ a.navbar {
     padding: 16px;
     text-align: center;
     text-decoration: none;
-    
 }
 
 #log-in {
@@ -96,6 +96,7 @@ a.navbar {
     height: 48px;
     width: 93px;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 24px;
     padding: 16px;
     text-align: center;
