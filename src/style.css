@@ -49,18 +49,19 @@ a.navbar {
     color: #ff6600;
     height: 48px;
     font-size: 16px;
+    font-weight: bold;
     margin: 8px;
     border-radius: 24px;
     padding: 16px;
     background-color: #1f1f1f;
     text-align: center;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 #apps {
     background-color: #ff6600;
     color: #1f1f1f;
-    font-weight: bold;
 }
 
 #nav-right {
@@ -74,16 +75,18 @@ a.navbar {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    background-color: #1f1f1f; /*Quando ci vai sopra con il mouse deve diventare #ff4d00*/
-    color: #ff6600; /*Quando ci vai sopra con il mouse deve diventare #1f1f1f*/
+    background-color: #1f1f1f;
+    color: #ff6600;
     height: 48px;
     width: 140px;
-    font-size: 16px; /*Quando ci vai sopra con il mouse deve diventare in grassetto*/
+    font-size: 16px;
+    font-weight: bold;
     border-radius: 24px;
     margin-right: -48px;
     padding: 16px;
     text-align: center;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 #log-in {
@@ -91,7 +94,7 @@ a.navbar {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    background-color: #ff6600; /*Quando ci vai sopra con il mouse deve diventare #ff4d00*/
+    background-color: #ff6600;
     color: #1f1f1f;
     height: 48px;
     width: 93px;
@@ -101,6 +104,7 @@ a.navbar {
     padding: 16px;
     text-align: center;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 div.container {
@@ -124,4 +128,26 @@ a.item {
     font-size: 300%;
     backdrop-filter: blur(10px);
     text-decoration: none;
+}
+
+/* Animations */
+
+a.navbar:hover {
+    color: #1f1f1f;
+    background-color: #ff4d00;
+    transform: translateY(-3px);
+}
+
+#apps:hover {
+    background-color: #ff4d00;
+    transform: translateY(-3px);
+}
+
+#sign-up:hover {
+    color: #1f1f1f;
+    background-color: #ff4d00;
+}
+
+#log-in:hover {
+    background-color: #ff4d00;
 }
