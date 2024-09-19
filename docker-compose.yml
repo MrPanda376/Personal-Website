@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    container_name: Personal-Website  # Nome container
+    build: .
+    ports:
+      - "80:1000"  # Esponi la porta 80 del container sulla 1000 del server
+    restart: unless-stopped  # Garantisce il riavvio automatico in caso di crash o riavvio del sistema
+    volumes:
+      - .:/app  # Monta la directory locale nel container per facilitare gli aggiornamenti del sito
