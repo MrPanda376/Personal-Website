@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -8,7 +10,7 @@ body {
     background-attachment: scroll;
     background-repeat: no-repeat; */
     background-color: #121212;
-    font-family: Verdana, sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 0px;
 }
 
@@ -34,6 +36,7 @@ h1.navbar {
     width: 20%;
     padding: 8px;
     margin: 0px;
+    transition: all 0.3s ease;
 }
 
 #nav-center {
@@ -128,6 +131,7 @@ a.item {
     font-size: 300%;
     backdrop-filter: blur(10px);
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 /* Animations */
