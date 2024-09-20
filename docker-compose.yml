@@ -8,3 +8,5 @@ services:
     ports:
       - 1000:80  # Esponi la porta 80 del container sulla 1000 del server
     restart: unless-stopped  # Garantisce il riavvio automatico in caso di crash o riavvio del sistema
+
+# Per aggiornare il container dopo la modifica dei file del sito fare: docker-compose up -d --force-recreate
