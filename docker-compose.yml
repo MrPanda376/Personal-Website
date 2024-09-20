@@ -12,7 +12,7 @@ services:
 # To update the website:
 # 1) cd Desktop/Personal-Website
 # 2) docker-compose down
-# 3) cd Desktop
+# 3) cd /home/luca/Desktop
 # 4) rm -r Personal-Website
 # 5) git clone https://github.com/MrPanda376/Personal-Website
 # 6) cd Desktop/Personal-Website
