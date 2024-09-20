@@ -2,11 +2,18 @@ version: '3'
 services:
   website:
     image: nginx:latest
-    container_name: Personal-Website  # Nome container
+    container_name: Personal-Website  # Container name
     volumes:
-      - /home/luca/Desktop/Personal-Website/src:/usr/share/nginx/html  # - <il path per la mia cartella>:/usr/share/nginx/html
+      - /home/luca/Desktop/Personal-Website/src:/usr/share/nginx/html  # - <my folder's path>:/usr/share/nginx/html
     ports:
-      - 1000:80  # Esponi la porta 80 del container sulla 1000 del server
-    restart: unless-stopped  # Garantisce il riavvio automatico in caso di crash o riavvio del sistema
+      - 1000:80  # - <server port (outside) [ex:1000]>:<container port (inside) [ex:80]>
+    restart: unless-stopped  # Keeps the webside always running unless it gets manually stopped
 
-# Per aggiornare il container dopo la modifica dei file del sito fare: docker-compose up -d --force-recreate
+# To update the website:
+# 1) cd Desktop/Personal-Website
+# 2) docker-compose down
+# 3) cd Desktop
+# 4) rm -r Personal-Website
+# 5) git clone https://github.com/MrPanda376/Personal-Website
+# 6) cd Desktop/Personal-Website
+# 7) docker-compose up -d
