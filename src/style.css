@@ -155,3 +155,19 @@ a.navbar:hover {
 #log-in:hover {
     background-color: #ff4d00;
 }
+
+/* Website style when screen width is below 1036px */
+
+@media only screen and (max-width: 1036px) {
+    body {
+        background-color: aliceblue;
+    }
+
+    a.navbar, #nav-center {
+        display: none;
+    }
+
+    #nav-right, h1.navbar {
+        width: 50%;
+    }
+}
