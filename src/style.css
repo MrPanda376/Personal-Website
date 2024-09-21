@@ -178,13 +178,17 @@ a.navbar:hover {
 
     h1.navbar::after {
         content: "Apps";
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     button.navbar {
+        display: flex;
+        align-items: center;
         background-color: transparent;
         border: 0px;
         padding: 0px;
-        margin: 8px;
+        margin: 12px;
         margin-right: 0px;
     }
 
@@ -192,13 +196,5 @@ a.navbar:hover {
         width: 100%;
         padding: 90px 45px;
         font-size: 2em;
-    }
-
-
-
-
-
-    body {
-        background-color: aliceblue;
     }
 }
