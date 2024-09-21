@@ -47,6 +47,7 @@ a.navbar {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
     color: #ff6600;
     height: 48px;
     font-size: 16px;
@@ -145,6 +146,10 @@ a.navbar:hover {
     color: #1f1f1f;
     background-color: #ff4d00;
     transform: translateY(-3px);
+}
+
+a.navbar:hover svg.navbar {
+    fill: #1f1f1f;
 }
 
 #apps:hover {
