@@ -163,11 +163,17 @@ a.navbar:hover {
         background-color: aliceblue;
     }
 
-    a.navbar, #nav-center {
+    #nav-center, #sign-up {
         display: none;
     }
 
     #nav-right, h1.navbar {
         width: 50%;
+    }
+
+    a.item {
+        width: 100%;
+        padding: 20%;
+        font-size: 200%;
     }
 }
