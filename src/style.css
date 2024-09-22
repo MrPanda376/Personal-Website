@@ -30,8 +30,9 @@ h1.navbar {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
     color: #ff6600;
-    width: 20%;
+    width: 22.95%;
     padding: 8px;
     margin: 0px;
     transition: all 0.3s ease;
@@ -39,7 +40,7 @@ h1.navbar {
 
 #nav-center {
     display: flex;
-    width: 60%;
+    width: 54.1%;
     justify-content: center;
 }
 
@@ -61,6 +62,10 @@ a.navbar {
     transition: all 0.3s ease;
 }
 
+svg.navbar, svg.settings, svg.icon, svg.menu {
+    transition: all 0.3s ease;
+}
+
 #apps {
     background-color: #ff6600;
     color: #1f1f1f;
@@ -69,8 +74,22 @@ a.navbar {
 #nav-right {
     display: flex;
     justify-content: flex-end;
-    width: 20%;
+    width: 22.95%;
     padding: 8px;
+}
+
+a.settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    border: 0px;
+    padding: 0px;
+    margin-right: 16px;
+    transition: all 0.3s ease;
 }
 
 #sign-up {
@@ -109,7 +128,7 @@ a.navbar {
     transition: all 0.3s ease;
 }
 
-button.navbar {
+button.menu {
     display: none;
 }
 
@@ -157,6 +176,15 @@ a.navbar:hover svg.navbar {
     transform: translateY(-3px);
 }
 
+a.settings:hover {
+    background-color: #ff4d00;
+    transform: translateY(-3px);
+}
+
+a.settings:hover svg.settings {
+    fill: #1f1f1f;
+}
+
 #sign-up:hover {
     color: #1f1f1f;
     background-color: #ff4d00;
@@ -166,15 +194,76 @@ a.navbar:hover svg.navbar {
     background-color: #ff4d00;
 }
 
-/* Website style when screen width is below 1036px */
+/* Website style when screen width is below 1202px */
 
-@media only screen and (max-width: 1036px) {
+@media only screen and (max-width: 1202px) {
     #nav-center, #sign-up {
         display: none;
     }
 
-    #nav-right, h1.navbar {
+    h1.navbar, #nav-right {
         width: 50%;
+    }
+
+    button.menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1f1f1f;
+        border-radius: 24px;
+        width: 48px;
+        height: 48px;
+        border: 0px;
+        padding: 0px;
+        margin-left: 16px;
+        transition: all 0.3s ease;
+    }
+
+    a.item {
+        width: 48%;
+        padding: 90px 45px;
+        font-size: 2em;
+    }
+
+    /* Animations */
+
+    #log-in:hover {
+        transform: translateY(-3px);
+    }
+
+    button.menu:hover {
+        background-color: #ff4d00;
+        transform: translateY(-3px);
+    }
+
+    button.menu:hover svg.menu {
+        fill: #1f1f1f;
+    }
+}
+
+/* Website style when screen width is below 840px */
+
+@media only screen and (max-width: 840px) {
+    a.item {
+        width: 100%;
+        padding: 90px 45px;
+        font-size: 2em;
+    }
+}
+
+/* Website style when screen width is below 520px */
+
+@media only screen and (max-width: 520px) {
+    a.settings, svg.icon {
+        display: none;
+    }
+
+    h1.navbar {
+        width: 42%;
+    }
+
+    #nav-right {
+        width: 58%;
     }
 
     h1.navbar .full-word {
@@ -186,20 +275,6 @@ a.navbar:hover svg.navbar {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
-    button.navbar {
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-        border: 0px;
-        padding: 0px;
-        margin: 12px;
-        margin-right: 0px;
-    }
-
-    a.item {
-        width: 100%;
-        padding: 90px 45px;
-        font-size: 2em;
-    }
 }
+
+/* The website breaks at 345px width */
