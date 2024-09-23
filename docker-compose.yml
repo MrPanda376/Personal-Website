@@ -13,7 +13,7 @@ services:
 # 1) cd Desktop/Personal-Website
 # 2) docker-compose down
 # 3) cd /home/luca/Desktop
-# 4) rm -r Personal-Website
+# 4) sudo rm -r Personal-Website
 # 5) git clone https://github.com/MrPanda376/Personal-Website
-# 6) cd Desktop/Personal-Website
+# 6) cd Personal-Website
 # 7) docker-compose up -d
