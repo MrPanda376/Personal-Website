@@ -66,7 +66,7 @@ svg.navbar, svg.settings, svg.icon, svg.menu {
     transition: all 0.3s ease;
 }
 
-#home {
+#portfolio {
     background-color: #ff6600;
     color: #1f1f1f;
 }
@@ -169,7 +169,7 @@ a.navbar:hover svg.navbar {
     fill: #1f1f1f;
 }
 
-#home:hover {
+#portfolio:hover {
     background-color: #ff4d00;
     transform: translateY(-3px);
 }

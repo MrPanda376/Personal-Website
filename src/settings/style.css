@@ -66,11 +66,6 @@ svg.navbar, svg.settings, svg.icon, svg.menu {
     transition: all 0.3s ease;
 }
 
-#home {
-    background-color: #ff6600;
-    color: #1f1f1f;
-}
-
 #nav-right {
     display: flex;
     justify-content: flex-end;
@@ -82,7 +77,7 @@ a.settings {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1f1f1f;
+    background-color: #ff6600;
     border-radius: 24px;
     width: 48px;
     height: 48px;
@@ -169,18 +164,9 @@ a.navbar:hover svg.navbar {
     fill: #1f1f1f;
 }
 
-#home:hover {
-    background-color: #ff4d00;
-    transform: translateY(-3px);
-}
-
 a.settings:hover {
     background-color: #ff4d00;
     transform: translateY(-3px);
-}
-
-a.settings:hover svg.settings {
-    fill: #1f1f1f;
 }
 
 #sign-up:hover {
