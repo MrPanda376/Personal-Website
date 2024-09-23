@@ -15,5 +15,5 @@ services:
 # 3) cd /home/luca/Desktop
 # 4) sudo rm -r Personal-Website
 # 5) git clone https://github.com/MrPanda376/Personal-Website
-# 6) cd Desktop/Personal-Website
+# 6) cd Personal-Website
 # 7) docker-compose up -d
