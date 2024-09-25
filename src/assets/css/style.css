@@ -26,6 +26,8 @@ nav.navbar {
     border-bottom: 1px solid #1f1f1f;
 }
 
+/* Left part of the navbar */
+
 h1.navbar {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +39,8 @@ h1.navbar {
     margin: 0px;
     transition: all 0.3s ease;
 }
+
+/* Central part of the navbar */
 
 #nav-center {
     display: flex;
@@ -65,6 +69,8 @@ a.navbar {
 svg.navbar, svg.settings, svg.icon, svg.menu {
     transition: all 0.3s ease;
 }
+
+/* Right part of the navbar */
 
 #nav-right {
     display: flex;
@@ -123,9 +129,13 @@ a.settings {
     transition: all 0.3s ease;
 }
 
+/* Button to select the pages of the website on mobile */
+
 button.menu {
     display: none;
 }
+
+/* The menu that pops up after the button is clicked */
 
 div.menu {
     display: none;
@@ -186,6 +196,8 @@ a.menu {
     text-decoration: none;
     transition: all 0.3s ease;
 }
+
+/* Container of the website and the elements inside it */
 
 div.container {
     display: flex;

@@ -3,6 +3,8 @@
     color: #1f1f1f;
 }
 
+/* Animations */
+
 #home:hover, #home-menu:hover {
     background-color: #ff4d00;
     transform: translateY(-3px);
