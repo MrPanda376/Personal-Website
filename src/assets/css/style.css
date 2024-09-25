@@ -147,7 +147,7 @@ div.menu-container {
     background: transparent;
     width: 100%;
     height: fit-content;
-    padding: 16px;
+    padding: 0px 16px;
     max-width: 1440px;
     margin: 0 auto;
 }
