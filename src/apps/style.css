@@ -3,9 +3,47 @@
     color: #1f1f1f;
 }
 
+#cloudflared {
+    color: #cc0000;
+}
+
+#cloudflared::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/assets/img/apps/Cloudflared.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
 /* Animations */
 
 #apps:hover, #apps-menu:hover {
     background-color: #ff4d00;
     transform: translateY(-3px);
+}
+
+#cloudflared:hover::before {
+    background-size: 130%;
+    filter: blur(3px);
+}
+
+/* Website style when screen width is below 520px */
+
+@media only screen and (max-width: 520px) {
+    h1.navbar .full-word {
+        display: none;
+    }
+
+    h1.navbar::after {
+        content: "Apps";
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
