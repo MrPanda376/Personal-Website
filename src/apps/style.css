@@ -10,7 +10,7 @@
     -webkit-text-stroke: 1px black;
 }
 
-#filestash, #speedtest, #static-website, #truenas, #minecraft, #personal-website, #uptime-nas {
+#filestash, #speedtest, #static-website, #truenas, #minecraft, #personal-website, #uptime-nas, #plex {
     color: #007000;
     -webkit-text-stroke: 1px black;
 }
@@ -158,6 +158,25 @@
     filter: blur(2px);
 }
 
+/* Test Server */
+
+#plex::before {
+    content: '';
+    position: absolute;
+    border-radius: 32px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/assets/img/apps/Plex.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+    z-index: -1;
+    filter: blur(2px);
+}
+
 /* Raspberry Pi */
 
 #personal-website::before {
@@ -202,7 +221,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/assets/img/apps/wireguard.png');
+    background: url('/assets/img/apps/Wireguard.png');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -245,7 +264,7 @@
     filter: blur(3px);
 }
 
-#wireguard:hover::before {
+#wireguard:hover::before, #plex:hover::before {
     background-size: 100%;
     filter: blur(3px);
 }
