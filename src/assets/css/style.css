@@ -34,7 +34,7 @@ h1.navbar {
     align-content: center;
     align-items: center;
     color: #ff6600;
-    width: 22.95%;
+    width: calc(50% - 288.17px);
     padding: 8px;
     margin: 0px;
     transition: all 0.3s ease;
@@ -44,7 +44,8 @@ h1.navbar {
 
 #nav-center {
     display: flex;
-    width: 54.1%;
+    position: relative;
+    width: fit-content;
     justify-content: center;
 }
 
@@ -63,10 +64,39 @@ a.navbar {
     background-color: #1f1f1f;
     text-align: center;
     text-decoration: none;
+    z-index: 1002;
     transition: all 0.3s ease;
 }
 
-svg.navbar, svg.settings, svg.icon, svg.menu {
+div.hover {
+    position: absolute;
+    top: 32px;
+    height: 40px;
+    z-index: 1001;
+
+    background-color: aliceblue;
+}
+
+#hover-apps {
+    width: 95.25px;
+    left: 103px;
+}
+
+#hover-servers {
+    width: 115.31px;
+    left: 214.5px;
+}
+
+#hover-about {
+    width: 104.53px;
+    left: 463.75px;
+}
+
+svg.navbar {
+    display: none;
+}
+
+svg.navbar, svg.settings, svg.icon, svg.menu, svg.arrow, svg.arrow-menu {
     transition: all 0.3s ease;
 }
 
@@ -75,7 +105,7 @@ svg.navbar, svg.settings, svg.icon, svg.menu {
 #nav-right {
     display: flex;
     justify-content: flex-end;
-    width: 22.95%;
+    width: calc(50% - 288.17px);
     padding: 8px;
 }
 
@@ -133,6 +163,16 @@ a.settings {
 
 button.menu {
     display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    border: 0px;
+    padding: 0px;
+    margin-left: 16px;
+    transition: all 0.3s ease;
 }
 
 /* The menu that pops up after the button is clicked */
@@ -164,13 +204,14 @@ div.menu-container {
 
 a.menu {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
     justify-content: center;
     color: #ff6600;
     height: 64px;
-    width: calc(33.33% - 16px);
+    width: calc(50% - 16px);
     font-size: 1.5em;
     font-weight: bold;
     margin: 8px;
@@ -180,6 +221,11 @@ a.menu {
     text-align: center;
     text-decoration: none;
     transition: all 0.3s ease;
+}
+
+svg.arrow-menu {
+    position: absolute;
+    right: 8px;
 }
 
 #sign-up-menu {
@@ -248,8 +294,13 @@ a.navbar:hover, a.menu:hover {
     transform: translateY(-3px);
 }
 
-a.navbar:hover svg.navbar {
+a.navbar:hover svg.navbar, a.menu:hover svg.navbar {
     fill: #1f1f1f;
+}
+
+a.navbar:hover svg.arrow, a.menu:hover svg.arrow-menu {
+    fill: #1f1f1f;
+    transform: rotate(180deg);
 }
 
 #sign-up-menu:hover {
@@ -275,17 +326,63 @@ a.settings:hover svg.settings {
     background-color: #ff4d00;
 }
 
-a.menu:hover svg.navbar {
-    fill: #1f1f1f;
-}
-
 a.item:hover {
     transform: translateY(-5px);
 }
 
-/* Website style when screen width is below 1202px */
+button.menu:hover {
+    background-color: #ff4d00;
+    transform: translateY(-3px);
+}
 
-@media only screen and (max-width: 1202px) {
+button.menu:hover svg.menu {
+    fill: #1f1f1f;
+}
+
+/* Website style when screen width is below 1153px */
+
+@media only screen and (max-width: 1153px) {
+    h1.navbar, #nav-right {
+        width: calc(50% - 208px);
+    }
+
+    #home, #portfolio {
+        padding: 0px;
+        width: 48px;
+        justify-content: center;
+    }
+
+    span.name {
+        display: none;
+    }
+
+    svg.navbar {
+        display: block;
+    }
+
+    #hover-apps {
+        width: 80px;
+        left: 72px;
+    }
+    
+    #hover-servers {
+        width: 80px;
+        left: 168px;
+    }
+    
+    #hover-about {
+        width: 80px;
+        left: 328px;
+    }
+
+    a.item {
+        width: calc(50% - 16px);
+    }
+}
+
+/* Website style when screen width is below 992px */
+
+@media only screen and (max-width: 992px) {
     #nav-center, #sign-up {
         display: none;
     }
@@ -296,19 +393,9 @@ a.item:hover {
 
     button.menu {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #1f1f1f;
-        border-radius: 24px;
-        width: 48px;
-        height: 48px;
-        border: 0px;
-        padding: 0px;
-        margin-left: 16px;
-        transition: all 0.3s ease;
     }
 
-    a.item {
+    a.menu {
         width: calc(50% - 16px);
     }
 
@@ -317,32 +404,19 @@ a.item:hover {
     #log-in:hover {
         transform: translateY(-3px);
     }
-
-    button.menu:hover {
-        background-color: #ff4d00;
-        transform: translateY(-3px);
-    }
-
-    button.menu:hover svg.menu {
-        fill: #1f1f1f;
-    }
 }
 
 /* Website style when screen width is below 840px */
 
 @media only screen and (max-width: 840px) {
-    a.menu {
-        width: calc(50% - 16px);
-    }
-    
     a.item {
         width: 100%;
     }
 }
 
-/* Website style when screen width is below 520px */
+/* Website style when screen width is below 530px */
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 530px) {
     a.settings, svg.icon {
         display: none;
     }
