@@ -13,10 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownApps = document.getElementById("dropdown-apps");
     const dropdownServers = document.getElementById("dropdown-servers");
     const dropdownAbout = document.getElementById("dropdown-about");
-    // Get the svgs
-    const svgApps = document.getElementById("svg-apps");
-    const svgServers = document.getElementById("svg-servers");
-    const svgAbout = document.getElementById("svg-about");
 
     // Create the arrays with all of the elements of each category
     const allDivsApps = [buttonApps, hoverApps, dropdownApps];
