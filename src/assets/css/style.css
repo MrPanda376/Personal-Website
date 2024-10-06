@@ -14,6 +14,10 @@ body {
     margin: 0px;
 }
 
+button {
+    border: 0px;
+}
+
 nav.navbar {
     display: flex;
     background: transparent;
@@ -49,7 +53,7 @@ h1.navbar {
     justify-content: center;
 }
 
-a.navbar {
+a.navbar, button.navbar {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -69,6 +73,7 @@ a.navbar {
 }
 
 div.hover {
+    display: none;
     position: absolute;
     top: 32px;
     height: 40px;
@@ -78,18 +83,65 @@ div.hover {
 }
 
 #hover-apps {
-    width: 95.25px;
+    width: 96px;
     left: 103px;
 }
 
 #hover-servers {
-    width: 115.31px;
-    left: 214.5px;
+    width: 114.72px;
+    left: 215px;
 }
 
 #hover-about {
-    width: 104.53px;
-    left: 463.75px;
+    width: 102.2px;
+    left: 464px;
+}
+
+div.dropdown {
+    display: none;
+    flex-wrap: wrap;
+    align-content: space-between;
+    position: absolute;
+    top: 72px;
+    height: 192px;
+    padding: 12px;
+    border-radius: 24px;
+    z-index: 1001;
+    transition: all 0.3s ease;
+
+    background-color: blue;
+}
+
+#dropdown-apps {
+    width: calc(96px + (96px / 1.5));
+    left: calc(103px - (96px / 3));
+}
+
+#dropdown-servers {
+    width: calc(114.72px + (114.72px / 1.5));
+    left: calc(215px - (114.72px / 3));
+
+    background-color: red;
+}
+
+#dropdown-about {
+    width: calc(102.2px + (102.2px / 1.5));
+    left: calc(464px - (102.2px / 3));
+}
+
+a.dropdown-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #1f1f1f;
+    color: #ff6600;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 svg.navbar {
@@ -161,7 +213,7 @@ a.settings {
 
 /* Button to select the pages of the website on mobile */
 
-button.menu {
+button.toggle-menu {
     display: none;
     align-items: center;
     justify-content: center;
@@ -202,7 +254,7 @@ div.menu-container {
     margin: 0 auto;
 }
 
-a.menu {
+a.menu, button.menu {
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -288,32 +340,52 @@ hr {
 
 /* Animations */
 
-a.navbar:hover, a.menu:hover {
+a.navbar:hover, button.navbar:hover,
+a.menu:hover, button.menu:hover,
+a.dropdown-item:hover {
     color: #1f1f1f;
     background-color: #ff4d00;
     transform: translateY(-3px);
 }
 
-a.navbar:hover svg.navbar, a.menu:hover svg.navbar {
+#hover-apps:hover ~ #apps, #dropdown-apps:hover ~ #apps,
+#hover-servers:hover ~ #servers, #dropdown-servers:hover ~ #servers,
+#hover-about:hover ~ #about, #dropdown-about:hover ~ #about {
+    color: #1f1f1f;
+    background-color: #ff4d00;
+    transform: translateY(-3px);
+}
+
+a.navbar:hover svg.navbar, button.navbar:hover svg.navbar,
+a.menu:hover svg.navbar, button.menu:hover svg.navbar {
     fill: #1f1f1f;
 }
 
-a.navbar:hover svg.arrow, a.menu:hover svg.arrow-menu {
+#hover-apps:hover ~ #apps svg.navbar, #dropdown-apps:hover ~ #apps svg.navbar,
+#hover-servers:hover ~ #servers svg.navbar, #dropdown-servers:hover ~ #servers svg.navbar,
+#hover-about:hover ~ #about svg.navbar, #dropdown-about:hover ~ #about svg.navbar {
+    fill: #1f1f1f;
+}
+
+button.navbar:hover svg.arrow,
+#hover-apps:hover ~ button.navbar #svg-apps, #dropdown-apps:hover ~ button.navbar #svg-apps,
+#hover-servers:hover ~ button.navbar #svg-servers, #dropdown-servers:hover ~ button.navbar #svg-servers,
+#hover-about:hover ~ button.navbar #svg-about, #dropdown-about:hover ~ button.navbar #svg-about {
     fill: #1f1f1f;
     transform: rotate(180deg);
 }
 
-#sign-up-menu:hover {
+button.menu:hover svg.arrow-menu {
+    fill: #1f1f1f;
+    transform: rotate(180deg);
+}
+
+#sign-up-menu:hover, a.settings:hover, button.toggle-menu:hover {
     background-color: #ff4d00;
     transform: translateY(-3px);
 }
 
-a.settings:hover {
-    background-color: #ff4d00;
-    transform: translateY(-3px);
-}
-
-a.settings:hover svg.settings {
+a.settings:hover svg.settings, button.toggle-menu:hover svg.menu {
     fill: #1f1f1f;
 }
 
@@ -328,15 +400,6 @@ a.settings:hover svg.settings {
 
 a.item:hover {
     transform: translateY(-5px);
-}
-
-button.menu:hover {
-    background-color: #ff4d00;
-    transform: translateY(-3px);
-}
-
-button.menu:hover svg.menu {
-    fill: #1f1f1f;
 }
 
 /* Website style when screen width is below 1153px */
@@ -375,6 +438,18 @@ button.menu:hover svg.menu {
         left: 328px;
     }
 
+    #dropdown-apps {
+        left: calc(72px - (96px + (96px / 1.5) - 80px) / 2);
+    }
+    
+    #dropdown-servers {
+        left: calc(168px - (114.72px + (114.72px / 1.5) - 80px) / 2);
+    }
+    
+    #dropdown-about {
+        left: calc(328px - (102.2px + (102.2px / 1.5) - 80px) / 2);
+    }
+
     a.item {
         width: calc(50% - 16px);
     }
@@ -391,11 +466,11 @@ button.menu:hover svg.menu {
         width: 50%;
     }
 
-    button.menu {
+    button.toggle-menu {
         display: flex;
     }
 
-    a.menu {
+    a.menu, button.menu {
         width: calc(50% - 16px);
     }
 
@@ -429,7 +504,7 @@ button.menu:hover svg.menu {
         width: 58%;
     }
 
-    a.menu {
+    a.menu, button.menu {
         width: calc(100% - 16px);
     }
 }
