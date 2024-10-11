@@ -1,6 +1,6 @@
-// Shows and hides the dropdown menus
 // Executes the code after DOM is loaded
 document.addEventListener("DOMContentLoaded", function() {
+    // Shows and hides the dropdown menus (PC version of the website)
     // Get the buttons
     const buttonApps = document.getElementById("apps");
     const buttonServers = document.getElementById("servers");
@@ -146,6 +146,7 @@ function toggleDropdownMenu(id) {
     // Variable declaration
     let arrow, hoverDiv, dropdownDiv;
     // Switch to identify which button has been pressed
+    console.log(hoverDiv);
     switch (id) {
         case 0:
             arrow = document.getElementById("svg-apps");
@@ -164,29 +165,32 @@ function toggleDropdownMenu(id) {
         break;
         case 3:
             arrow = document.getElementById("svg-apps-menu");
-            hoverDiv = document.getElementById("hover-apps-menu");
             dropdownDiv = document.getElementById("dropdown-apps-menu");
         break;
         case 4:
             arrow = document.getElementById("svg-servers-menu");
-            hoverDiv = document.getElementById("hover-servers-menu");
             dropdownDiv = document.getElementById("dropdown-servers-menu");
         break;
         case 5:
             arrow = document.getElementById("svg-about-menu");
-            hoverDiv = document.getElementById("hover-about-menu");
             dropdownDiv = document.getElementById("dropdown-about-menu");
         break;
     }
     if (dropdownDiv.style.display === "") {
         // If the dropdown is closed
         arrow.style.transform = "rotate(180deg)";
-        hoverDiv.style.display = "flex";
+        // hoverDiv has to be defined in order to change it
+        if (hoverDiv !== undefined) {
+            hoverDiv.style.display = "flex";
+        }
         dropdownDiv.style.display = "flex";
     } else {
         // If the dropdown is open
         arrow.style.transform = "rotate(0deg)";
-        hoverDiv.style.display = "";
+        // hoverDiv has to be defined in order to change it
+        if (hoverDiv !== undefined) {
+            hoverDiv.style.display = "";
+        }
         dropdownDiv.style.display = "";
     }
 }
