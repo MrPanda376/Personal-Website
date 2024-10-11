@@ -372,12 +372,10 @@ button.navbar:hover svg.arrow,
 #hover-servers:hover ~ button.navbar #svg-servers, #dropdown-servers:hover ~ button.navbar #svg-servers,
 #hover-about:hover ~ button.navbar #svg-about, #dropdown-about:hover ~ button.navbar #svg-about {
     fill: #1f1f1f;
-    transform: rotate(180deg);
 }
 
 button.menu:hover svg.arrow-menu {
     fill: #1f1f1f;
-    transform: rotate(180deg);
 }
 
 #sign-up-menu:hover, a.settings:hover, button.toggle-menu:hover {

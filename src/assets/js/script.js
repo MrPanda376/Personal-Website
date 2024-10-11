@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownApps = document.getElementById("dropdown-apps");
     const dropdownServers = document.getElementById("dropdown-servers");
     const dropdownAbout = document.getElementById("dropdown-about");
+    // Get the svgs
+    const svgApps = document.getElementById("svg-apps");
+    const svgServers = document.getElementById("svg-servers");
+    const svgAbout = document.getElementById("svg-about");
 
     // Create the arrays with all of the elements of each category
     const allDivsApps = [buttonApps, hoverApps, dropdownApps];
@@ -25,16 +29,19 @@ document.addEventListener("DOMContentLoaded", function() {
     function showDivsApps() {
         hoverApps.style.display = "flex";
         dropdownApps.style.display = "flex";
+        svgApps.style.transform = "rotate(180deg)";
     }
     // Function to show all the 'Servers' elements
     function showDivsServers() {
         hoverServers.style.display = "flex";
         dropdownServers.style.display = "flex";
+        svgServers.style.transform = "rotate(180deg)";
     }
     // Function to show all the 'About' elements
     function showDivsAbout() {
         hoverAbout.style.display = "flex";
         dropdownAbout.style.display = "flex";
+        svgAbout.style.transform = "rotate(180deg)";
     }
 
     // Hide functions
@@ -43,16 +50,19 @@ document.addEventListener("DOMContentLoaded", function() {
     function hideDivsApps() {
         hoverApps.style.display = "";
         dropdownApps.style.display = "";
+        svgApps.style.transform = "rotate(0deg)";
     }
     // Function to hide all the 'Servers' elements
     function hideDivsServers() {
         hoverServers.style.display = "";
         dropdownServers.style.display = "";
+        svgServers.style.transform = "rotate(0deg)";
     }
     // Function to hide all the 'About' elements
     function hideDivsAbout() {
         hoverAbout.style.display = "";
         dropdownAbout.style.display = "";
+        svgAbout.style.transform = "rotate(0deg)";
     }
 
     // Shows the 'Apps' elements
@@ -132,6 +142,51 @@ function toggleMenu() {
     return menu.style.display;
 }
 
-function toggleDropdownMenu() {
-    
+function toggleDropdownMenu(id) {
+    // Variable declaration
+    let arrow, hoverDiv, dropdownDiv;
+    // Switch to identify which button has been pressed
+    switch (id) {
+        case 0:
+            arrow = document.getElementById("svg-apps");
+            hoverDiv = document.getElementById("hover-apps");
+            dropdownDiv = document.getElementById("dropdown-apps");
+        break;
+        case 1:
+            arrow = document.getElementById("svg-servers");
+            hoverDiv = document.getElementById("hover-servers");
+            dropdownDiv = document.getElementById("dropdown-servers");
+        break;
+        case 2:
+            arrow = document.getElementById("svg-about");
+            hoverDiv = document.getElementById("hover-about");
+            dropdownDiv = document.getElementById("dropdown-about");
+        break;
+        case 3:
+            arrow = document.getElementById("svg-apps-menu");
+            hoverDiv = document.getElementById("hover-apps-menu");
+            dropdownDiv = document.getElementById("dropdown-apps-menu");
+        break;
+        case 4:
+            arrow = document.getElementById("svg-servers-menu");
+            hoverDiv = document.getElementById("hover-servers-menu");
+            dropdownDiv = document.getElementById("dropdown-servers-menu");
+        break;
+        case 5:
+            arrow = document.getElementById("svg-about-menu");
+            hoverDiv = document.getElementById("hover-about-menu");
+            dropdownDiv = document.getElementById("dropdown-about-menu");
+        break;
+    }
+    if (dropdownDiv.style.display === "") {
+        // If the dropdown is closed
+        arrow.style.transform = "rotate(180deg)";
+        hoverDiv.style.display = "flex";
+        dropdownDiv.style.display = "flex";
+    } else {
+        // If the dropdown is open
+        arrow.style.transform = "rotate(0deg)";
+        hoverDiv.style.display = "";
+        dropdownDiv.style.display = "";
+    }
 }
