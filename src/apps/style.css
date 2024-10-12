@@ -274,9 +274,9 @@
     filter: blur(3px);
 }
 
-/* Website style when screen width is below 520px */
+/* Website style when screen width is below 530px */
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 530px) {
     h1.navbar .full-word {
         display: none;
     }

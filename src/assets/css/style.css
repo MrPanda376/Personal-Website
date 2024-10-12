@@ -38,7 +38,7 @@ h1.navbar {
     align-content: center;
     align-items: center;
     color: #ff6600;
-    width: calc(50% - 288.17px);
+    width: calc(50% - 287.08px);
     padding: 8px;
     margin: 0px;
     transition: all 0.3s ease;
@@ -157,7 +157,7 @@ svg.navbar, svg.settings, svg.icon, svg.menu, svg.arrow, svg.arrow-menu {
 #nav-right {
     display: flex;
     justify-content: flex-end;
-    width: calc(50% - 288.17px);
+    width: calc(50% - 287.08px);
     padding: 8px;
 }
 

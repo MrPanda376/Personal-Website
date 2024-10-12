@@ -109,17 +109,27 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // Listener to the window resizing
+    window.addEventListener("resize", checkWidth);
 });
 
+// Function to check if the width of the window is too large to display the menu
+function checkWidth() {
+    if (window.innerWidth > 992) {
+        toggleMenu(0);
+    }
+}
+
 // Function to open and close the mobile menu
-function toggleMenu() {
+function toggleMenu(boolean) { // The boolean paramether is to manually open or close the menu
     // Get the svg image of the button
     const svgMenu = document.getElementById("svg-menu");
     // Get the div containing the menu
     const menu = document.getElementById("menu");
 
     // Verifies if the menu is open or closed
-    if (menu.style.display === "") {
+    if ((menu.style.display === "" && boolean === undefined) || boolean === 1) {
         // The menu is closed and has to be opened
 
         // Modifies the svg image of the button
@@ -128,7 +138,7 @@ function toggleMenu() {
         menu.style.display = "block";
         // Disables the scrolling in the main page
         document.body.style.overflow = "hidden";
-    } else {
+    } else if ((menu.style.display === "block" && boolean === undefined) || boolean === 0) {
         // The menu is open and has to be closed
 
         // Modifies the svg image of the button
