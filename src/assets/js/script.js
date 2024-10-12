@@ -28,19 +28,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to show all the 'Apps' elements
     function showDivsApps() {
         hoverApps.style.display = "flex";
-        dropdownApps.style.display = "flex";
+        dropdownApps.classList.remove("hidden");
+        dropdownApps.classList.add("fade-in");
         svgApps.style.transform = "rotate(180deg)";
     }
     // Function to show all the 'Servers' elements
     function showDivsServers() {
         hoverServers.style.display = "flex";
-        dropdownServers.style.display = "flex";
+        dropdownServers.classList.remove("hidden");
+        dropdownServers.classList.add("fade-in");
         svgServers.style.transform = "rotate(180deg)";
     }
     // Function to show all the 'About' elements
     function showDivsAbout() {
         hoverAbout.style.display = "flex";
-        dropdownAbout.style.display = "flex";
+        dropdownAbout.classList.remove("hidden");
+        dropdownAbout.classList.add("fade-in");
         svgAbout.style.transform = "rotate(180deg)";
     }
 
@@ -49,19 +52,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to hide all the 'Apps' elements
     function hideDivsApps() {
         hoverApps.style.display = "";
-        dropdownApps.style.display = "";
+        dropdownApps.classList.remove("fade-in");
+        dropdownApps.classList.add("hidden");
         svgApps.style.transform = "rotate(0deg)";
     }
     // Function to hide all the 'Servers' elements
     function hideDivsServers() {
         hoverServers.style.display = "";
-        dropdownServers.style.display = "";
+        dropdownServers.classList.remove("fade-in");
+        dropdownServers.classList.add("hidden");
         svgServers.style.transform = "rotate(0deg)";
     }
     // Function to hide all the 'About' elements
     function hideDivsAbout() {
         hoverAbout.style.display = "";
-        dropdownAbout.style.display = "";
+        dropdownAbout.classList.remove("fade-in");
+        dropdownAbout.classList.add("hidden");
         svgAbout.style.transform = "rotate(0deg)";
     }
 
@@ -186,14 +192,15 @@ function toggleDropdownMenu(id) {
             dropdownDiv = document.getElementById("dropdown-about-menu");
         break;
     }
-    if (dropdownDiv.style.display === "") {
+    if (dropdownDiv.classList.contains("hidden")) {
         // If the dropdown is closed
         arrow.style.transform = "rotate(180deg)";
         // hoverDiv has to be defined in order to change it
         if (hoverDiv !== undefined) {
             hoverDiv.style.display = "flex";
         }
-        dropdownDiv.style.display = "flex";
+        dropdownDiv.classList.remove("hidden");
+        dropdownDiv.classList.add("fade-in");
     } else {
         // If the dropdown is open
         arrow.style.transform = "rotate(0deg)";
@@ -201,6 +208,7 @@ function toggleDropdownMenu(id) {
         if (hoverDiv !== undefined) {
             hoverDiv.style.display = "";
         }
-        dropdownDiv.style.display = "";
+        dropdownDiv.classList.remove("fade-in");
+        dropdownDiv.classList.add("hidden");
     }
 }
