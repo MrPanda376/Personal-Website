@@ -520,12 +520,12 @@ a.item:hover {
     }
 
     h1.navbar {
-        width: 42%;
+        width: 41.14%;
     }
 
     #nav-right {
-        width: 58%;
+        width: 58.86%;
     }
 }
 
-/* The website breaks at 345px width */
+/* The website breaks at 325px width */
