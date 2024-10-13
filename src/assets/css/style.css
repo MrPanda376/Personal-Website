@@ -163,7 +163,7 @@ svg.navbar {
     display: none;
 }
 
-svg.navbar, svg.settings, svg.icon, svg.menu, svg.arrow, svg.arrow-menu {
+svg.navbar, svg.icon, svg.menu, svg.arrow, svg.arrow-menu {
     transition: all 0.3s ease;
 }
 
@@ -176,7 +176,7 @@ svg.navbar, svg.settings, svg.icon, svg.menu, svg.arrow, svg.arrow-menu {
     padding: 8px;
 }
 
-a.settings {
+#settings {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,8 +186,13 @@ a.settings {
     height: 48px;
     border: 0px;
     padding: 0px;
+    margin: 0px;
     margin-right: 16px;
     transition: all 0.3s ease;
+}
+
+#svg-settings {
+    display: block;
 }
 
 #sign-up {
@@ -423,12 +428,12 @@ button.menu:hover svg.arrow-menu {
     fill: #1f1f1f;
 }
 
-#sign-up-menu:hover, a.settings:hover, button.toggle-menu:hover {
+#sign-up-menu:hover, #settings:hover, button.toggle-menu:hover {
     background-color: #ff4d00;
     transform: translateY(-3px);
 }
 
-a.settings:hover svg.settings, button.toggle-menu:hover svg.menu {
+button.toggle-menu:hover svg.menu {
     fill: #1f1f1f;
 }
 
@@ -531,7 +536,7 @@ a.item:hover {
 /* Website style when screen width is below 530px */
 
 @media only screen and (max-width: 530px) {
-    a.settings, svg.icon {
+    #settings, svg.icon {
         display: none;
     }
 

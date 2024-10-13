@@ -162,7 +162,6 @@ function toggleDropdownMenu(id) {
     // Variable declaration
     let arrow, hoverDiv, dropdownDiv;
     // Switch to identify which button has been pressed
-    console.log(hoverDiv);
     switch (id) {
         case 0:
             arrow = document.getElementById("svg-apps");
@@ -201,6 +200,7 @@ function toggleDropdownMenu(id) {
         }
         dropdownDiv.classList.remove("hidden");
         dropdownDiv.classList.add("fade-in");
+        return true;
     } else {
         // If the dropdown is open
         arrow.style.transform = "rotate(0deg)";
@@ -210,5 +210,6 @@ function toggleDropdownMenu(id) {
         }
         dropdownDiv.classList.remove("fade-in");
         dropdownDiv.classList.add("hidden");
+        return false;
     }
 }

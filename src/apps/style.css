@@ -3,6 +3,11 @@
     color: #1f1f1f;
 }
 
+#apps svg.navbar, #svg-apps,
+#apps-menu svg.navbar, #svg-apps-menu {
+    fill: #1f1f1f;
+}
+
 /* Text color */
 
 #cloudflared {

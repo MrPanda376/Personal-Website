@@ -3,6 +3,11 @@
     color: #1f1f1f;
 }
 
+#servers svg.navbar, #svg-servers,
+#servers-menu svg.navbar, #svg-servers-menu {
+    fill: #1f1f1f;
+}
+
 /* Animations */
 
 #servers:hover, #servers-menu:hover {
