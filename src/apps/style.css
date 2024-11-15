@@ -253,7 +253,7 @@
 
 /* Animations */
 
-#apps:hover, #apps-menu:hover {
+#apps:hover {
     background-color: #ff4d00;
 }
 

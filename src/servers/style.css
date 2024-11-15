@@ -1,16 +1,14 @@
-#servers, #servers-menu {
+#servers {
     background-color: #ff6600;
     color: #1f1f1f;
 }
 
-#servers svg.navbar, #svg-servers,
-#servers-menu svg.navbar, #svg-servers-menu {
+#svg-servers {
     fill: #1f1f1f;
 }
 
 /* Animations */
 
-#servers:hover, #servers-menu:hover {
+#servers:hover {
     background-color: #ff4d00;
-    transform: translateY(-3px);
 }

@@ -188,24 +188,24 @@ div.hover {
     display: none;
     position: absolute;
     top: 32px;
-    height: 40px;
+    height: 64px;
     z-index: 1001;
     background-color: transparent;
 }
 
 #hover-apps {
-    width: 88px;
-    left: 181px;
+    width: calc(88px + (88px / 1.5));
+    left: calc(181px - (88px / 3));
 }
 
 #hover-servers {
-    width: 106.72px;
-    left: 276px;
+    width: calc(106.72px + (106.72px / 1.5));
+    left: calc(276px - (106.72px / 3));
 }
 
 #hover-about {
-    width: 94.2px;
-    left: 493px;
+    width: calc(94.2px + (94.2px / 1.5));
+    left: calc(493px - (94.2px / 3));
 }
 
 div.dropdown {
