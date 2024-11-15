@@ -2,9 +2,9 @@ version: '3'
 services:
   website:
     image: nginx:latest
-    container_name: Personal-Website  # Container name
+    container_name: www.silvestrin.ovh  # Container name
     volumes:
-      - /home/luca/Desktop/Personal-Website/src:/usr/share/nginx/html  # - <my folder's path>:/usr/share/nginx/html
+      - /src:/usr/share/nginx/html  # - <my folder's path>:/usr/share/nginx/html
     ports:
       - 1000:80  # - <server port (outside) [ex:1000]>:<container port (inside) [ex:80]>
     restart: unless-stopped  # Keeps the webside always running unless it gets manually stopped
