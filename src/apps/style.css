@@ -1,10 +1,9 @@
-#apps, #apps-menu {
+#apps {
     background-color: #ff6600;
     color: #1f1f1f;
 }
 
-#apps svg.navbar, #svg-apps,
-#apps-menu svg.navbar, #svg-apps-menu {
+#svg-apps {
     fill: #1f1f1f;
 }
 
@@ -256,7 +255,6 @@
 
 #apps:hover, #apps-menu:hover {
     background-color: #ff4d00;
-    transform: translateY(-3px);
 }
 
 #cloudflared:hover::before, #filestash:hover::before, #truenas:hover::before, #static-website:hover::before, #static-admin:hover::before, #speedtest:hover::before, #minecraft:hover::before, #mineos:hover::before, #chronos:hover::before {
